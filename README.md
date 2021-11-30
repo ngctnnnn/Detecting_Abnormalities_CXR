@@ -3,7 +3,18 @@
 ## Different deep learning approaches in detecting various abnormalities via Chest X-Ray images
 </div>
 
-### Dataset
+In this work, we would like to introduce 2 of the highlighted neural architectures in the field of object detection, which are: *[DEtection TRansformer](https://arxiv.org/abs/2005.12872)* and *[You Only Look Once](https://github.com/ultralytics/yolov5)*. After that, we shall compare the performance between 2 these architectures via applying into the problem of detecting various abnormalities using CXR images. And finally, we will introduce our demo for this work.
+
+### Table of contents
+1. [Introduction](#1-introduction)
+2. [Repo structure](#2-repo-structure)
+3. [Experimental configuration](#3-experimental-configuration)
+4. [Pretrained model](#4-pretrained-model)
+5. [Results](#5-results)
+6. [References](#6-references)
+
+### 1. Introduction
+#### Dataset
 - Our dataset is taken from [VinDr-CXR](https://vindr.ai/datasets/cxr).
 <div align='center'>
 
@@ -14,7 +25,7 @@
 
 - Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
 
-### Architectures
+#### Architectures
 Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.org/abs/2005.12872)* and *[You Only Look Once](https://github.com/ultralytics/yolov5)*.     
 
 - **DEtection TRansformer (DETR)**: Proposed by Nicolas Carion and Francisco Massa from Facebook AI in 2020. DETR was first introduced to eliminate handmade's interference on postprocessing step effectively but still maintain the high performance compared to other methods.    
@@ -31,7 +42,15 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 <img src='assets/yolov5.png'>
 </div>
 
-### Experimental configuration
+### 2. Repo structure
+- assets: images used for this readme
+- Model
+    - DETR.ipynb
+    - YOLOv5.ipynb
+- gitignore
+- LICENSE
+
+### 3. Experimental configuration
 
 - Proceeded in 30 epochs with GPU: NVIDIA@Tesla P100-PCIE-16GB, RAM: 26GB and Pytorch framework
 - Both architectures are trained and validated using 5-fold cross validation on training set; then tested on test set
@@ -40,12 +59,12 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 - DETR’s learning rate is 3e-5 and YOLOv5x’s learning rate is 0.01
 
 
-### Pretrained model
+### 4. Pretrained model
 - [YOLOv5x](https://drive.google.com/file/d/1ZckQYba28BkCLZX0ASgvM6THhhEjZTlf/view)
 - [DETR](https://drive.google.com/file/d/1BDjRhMsuryTS8oQ6uWRD8RM7Sf7JC547/view)
 
 
-### Results
+### 5. Results
 <div align='center'>
     
 | | Private score (mAP) |
@@ -86,7 +105,7 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 </div>
 
 
-### References
+### 6. References
 [1]  Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020, August). End-to-end object detection with transformers. In European Conference on Computer Vision (pp. 213-229). Springer, Cham.         
 [2]  Stewart, R.J., Andriluka, M., Ng, A.Y.: End-to-end people detection in crowded scenes. In: CVPR (2015)      
 [3]  Nguyen, H. Q., Lam, K., Le, L. T., Pham, H. H., Tran, D. Q., Nguyen, D. B., ... & Vu, V. (2020). VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations. arXiv preprint arXiv:2012.15029      
