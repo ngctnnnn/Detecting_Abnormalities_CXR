@@ -73,6 +73,16 @@ function route(app){
             ); 
             return res.render('upload_model');
         } 
+        if (path.extname(req.file.originalname).toLowerCase() === ".pth") {
+            fs.rename(
+                path.join(__dirname, '../public/model/', req.file.originalname), 
+                path.join(__dirname, '../public/model/', 'model.pth'), 
+                (err) => {
+                    if (err) throw err;
+                }
+            ); 
+            return res.render('upload_model');
+        } 
         fs.unlinkSync(path.join(__dirname, '../public/model/', req.file.originalname));
         return res.render('NOT_SUPPORTED_MODEL');
     });
