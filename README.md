@@ -44,7 +44,7 @@ Private score on [Kaggle's VinBigData Chest X-ray Abnormalities Detection contes
 
 <div style='flex' align='center'>
 
-<img src='assets/train_curve.png'>
-<img src='assets/loss_curve.png'>
+<img src='assets/train-curve.png'>
+<img src='assets/loss-curve.png'>
 </div>
 
