@@ -5,8 +5,6 @@
 
 In this work, we would like to introduce 2 of the highlighted neural architectures in the field of object detection, which are: *[DEtection TRansformer](https://arxiv.org/abs/2005.12872)* and *[You Only Look Once](https://github.com/ultralytics/yolov5)*. After that, we shall compare the performance between 2 these architectures via applying into the problem of detecting various abnormalities using CXR images. And finally, we will introduce our demo for this work.      
 
-Our seminar towards this problem is [here](https://docs.google.com/presentation/d/1yuXYOfvzT87p70bg9UB8lxxuV51fv76dW3TDGhrJR4g/edit?usp=sharing)
-
 ### Table of contents
 1. [Introduction](#1-introduction)
 2. [Repo structure](#2-repo-structure)
@@ -18,6 +16,7 @@ Our seminar towards this problem is [here](https://docs.google.com/presentation/
 ---
 
 ### 1. Introduction
+Our seminar towards this problem is [here](https://docs.google.com/presentation/d/1yuXYOfvzT87p70bg9UB8lxxuV51fv76dW3TDGhrJR4g/edit?usp=sharing)
 #### Dataset
 - Our dataset is taken from [VinDr-CXR](https://vindr.ai/datasets/cxr).
 <div align='center'>
