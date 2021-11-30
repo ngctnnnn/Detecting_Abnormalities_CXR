@@ -21,7 +21,6 @@ Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 
 
 
 ### Results
-<div align='center'>
-    <div style="float: left"><img id ="ttl" src="assets/val_batch1_pred.jpg"></div>
-    <div style="float: right"><img id ="se" src="assets/val_batch2_labels.jpg"><div>
+<div align='center'>    
+    <img style='height: 50%, width: 50%' src='assets/val_batch1_pred.jpg'>
 </div>
