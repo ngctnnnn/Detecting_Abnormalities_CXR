@@ -46,16 +46,16 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 </div>
 
 ### 2. Repo structure
-- assets: images used for this readme
-- Model
-    - DETR.ipynb
-    - YOLOv5.ipynb
-- gitignore
-- LICENSE
+- **assets**: images used for this readme
+- **Model**
+    - **DETR.ipynb**
+    - **YOLOv5.ipynb**
+- **gitignore**
+- **LICENSE**
 
 ### 3. Experimental configuration
 
-- Proceeded in 30 epochs with GPU: NVIDIA@Tesla P100-PCIE-16GB, RAM: 26GB and Pytorch framework
+- Proceeded in 30 epochs with GPU: `NVIDIA @ Tesla P100-PCIE-16GB`, RAM: 26GB and Pytorch framework
 - Both architectures are trained and validated using 5-fold cross validation on training set; then tested on test set
 - Use pretrained YOLOv5x and pretrained DETR on COCO val-2017
 - Use ResNet50 as their own CNN backbone
