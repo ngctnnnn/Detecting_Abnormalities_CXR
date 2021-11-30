@@ -54,10 +54,10 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 | Rank 2 | 0.307 | 
 | ... | ... |
 | Rank 1005 | 0.137 |
-| Our YOLOv5 | 0.136 | 
+| **Our YOLOv5** | **0.136** | 
 | ... | ... |
 | Rank 1099 | 0.064 | 
-| Our DETR | 0.062 | 
+| **Our DETR** | **0.062** | 
 | ... | ... |
 </div>
 
