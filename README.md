@@ -13,7 +13,28 @@ Our dataset consists of 18 000 postero-anterior (PA) view Chest X-Rays (CXR) sca
 
 Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
 
+### Architectures
+Here we use 2 architectures, which are: *[DEtection TRansformer]*(https://arxiv.org/abs/2005.12872) and *[You Only Look Once]*(https://github.com/ultralytics/yolov5).     
+
+- DEtection TRansformer (DETR):
+<div align='center'>
+
+<img src='assets/detr.png'>
+</div>
+
+- You Only Look Once (YOLOv5):
+<div align='center'>
+
+<img src='assets/yolov5.png'>
+</div>
+
 ### Experimental configuration
+
+- Proceeded in 30 epochs with GPU: NVIDIA@Tesla P100-PCIE-16GB, RAM: 26GB and Pytorch framework
+- Both architectures are trained and validated using 5-fold cross validation on training set; then tested on test set
+- Use pretrained YOLOv5x and pretrained DETR on COCO val-2017
+- Use ResNet50 as their own CNN backbone
+- DETR’s learning rate is 3e-5 and YOLOv5x’s learning rate is 0.01
 
 
 ### Pretrained model
@@ -42,9 +63,18 @@ Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 
 Private score on [Kaggle's VinBigData Chest X-ray Abnormalities Detection contest](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection)
 </div>
 
-<div style='flex' align='center'>
+<div align='center'>
 
-<img src='assets/train-curve.png'>
-<img src='assets/loss-curve.png'>
+<img src='assets/train-loss.png'>
+<img src='assets/training-time-test.png'>
 </div>
+
+### References
+[1]  Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020, August). End-to-end object detection with transformers. In European Conference on Computer Vision (pp. 213-229). Springer, Cham.         
+[2]  Stewart, R.J., Andriluka, M., Ng, A.Y.: End-to-end people detection in crowded scenes. In: CVPR (2015)      
+[3]  Nguyen, H. Q., Lam, K., Le, L. T., Pham, H. H., Tran, D. Q., Nguyen, D. B., ... & Vu, V. (2020). VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations. arXiv preprint arXiv:2012.15029      
+[4]  G. Jocher, A. Stoken, J. Borovec, A. Chaurasia, L. Changyu, V. Abhiram, A. Hogan, A. Wang, J. Hajek, L. Diaconu, Y. Kwon, Y. Defretin, A. Lohia, B. Milanko, B. Fineran, D. Khromov, D. Yiwei and F. Ingham, ultralytics/yolov5: v5.0 - YOLOv5-P6 1280 models, AWS, Supervise.ly and YouTube integrations, Zenodo, 2021       
+[5]  Cai, Z., & Vasconcelos, N. (2019). Cascade r-cnn: High quality object detection and instance segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence.        
+[6]  Zhou, X., Wang, D., & Krähenbühl, P. (2019). Objects as points. arXiv preprint arXiv:1904.07850.     
+[7]  Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollar, and C Lawrence ´ Zitnick. Microsoft coco: Common objects in context. In ECCV, 2014.      
 
