@@ -13,6 +13,7 @@ Our dataset consists of 18 000 postero-anterior (PA) view Chest X-Rays (CXR) sca
 
 Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
 
+### Experimental configuration
 
 
 ### Pretrained model
@@ -24,3 +25,26 @@ Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 
 <div align='center'>    
     <img style='height: 50%, width: 50%' src='assets/val_batch1_pred.jpg'>
 </div>
+
+<div align='center'>
+
+| | Private score (mAP) |
+|:--:|:--:|
+| Rank 1 | 0.314 |
+| Rank 2 | 0.307 | 
+| ... | ... |
+| Rank 1005 | 0.137 |
+| Our YOLOv5 | 0.136 | 
+| ... | ... |
+| Rank 1099 | 0.064 | 
+| Our DETR | 0.062 | 
+| ... | ... |
+Private score on [Kaggle's VinBigData Chest X-ray Abnormalities Detection contest](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection)
+</div>
+
+<div style='flex' align='center'>
+
+<img src='assets/train_curve.png'>
+<img src='assets/loss_curve.png'>
+</div>
+
