@@ -4,25 +4,28 @@
 </div>
 
 ### Dataset
-Our dataset is taken from [VinDr-CXR](https://vindr.ai/datasets/cxr).
+- Our dataset is taken from [VinDr-CXR](https://vindr.ai/datasets/cxr).
 <div align='center'>
 
 <img src='assets/dataset.png'>
 </div>
-Our dataset consists of 18 000 postero-anterior (PA) view Chest X-Rays (CXR) scans from a set of more than 100 000 raw images. They are all annotated by a group of 17 radiologists with at least 8 years of experience.    
 
-Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
+- Our dataset consists of 18 000 postero-anterior (PA) view Chest X-Rays (CXR) scans from a set of more than 100 000 raw images. They are all annotated by a group of 17 radiologists with at least 8 years of experience.    
+
+- Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
 
 ### Architectures
-Here we use 2 architectures, which are: *[DEtection TRansformer]*(https://arxiv.org/abs/2005.12872) and *[You Only Look Once]*(https://github.com/ultralytics/yolov5).     
+Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.org/abs/2005.12872)* and *[You Only Look Once](https://github.com/ultralytics/yolov5)*.     
 
-- DEtection TRansformer (DETR):
+- **DEtection TRansformer (DETR)**: Proposed by Nicolas Carion and Francisco Massa from Facebook AI in 2020. DETR was first introduced to eliminate handmade's interference on postprocessing step effectively but still maintain the high performance compared to other methods.    
+
 <div align='center'>
 
 <img src='assets/detr.png'>
 </div>
 
-- You Only Look Once (YOLOv5):
+- **You Only Look Once (YOLOv5)**:Object recognition systems from the YOLO family are often used for vehicle recognition tasks, and have been shown to outperform other target recognition algorithms. YOLOv5 has proven to significantly improve the processing time of deeper networks. This attribute will gain in importance when moving forward with the project to bigger datasets and real-time detection.     
+
 <div align='center'>
 
 <img src='assets/yolov5.png'>
@@ -43,12 +46,8 @@ Here we use 2 architectures, which are: *[DEtection TRansformer]*(https://arxiv.
 
 
 ### Results
-<div align='center'>    
-    <img style='height: 50%, width: 50%' src='assets/val_batch1_pred.jpg'>
-</div>
-
 <div align='center'>
-
+    
 | | Private score (mAP) |
 |:--:|:--:|
 | Rank 1 | 0.314 |
@@ -60,14 +59,32 @@ Here we use 2 architectures, which are: *[DEtection TRansformer]*(https://arxiv.
 | Rank 1099 | 0.064 | 
 | Our DETR | 0.062 | 
 | ... | ... |
-Private score on [Kaggle's VinBigData Chest X-ray Abnormalities Detection contest](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection)
 </div>
 
 <div align='center'>
+    
+**Private score on Kaggle's VinBigData Chest X-ray Abnormalities Detection contest**
+
+</div>
+    
+<div align='center'>
 
 <img src='assets/train-loss.png'>
+
+**Training curve and valid loss curve on 2 architectures**
+
 <img src='assets/training-time-test.png'>
+    
+**Comparison between 2 architectures**
+    
 </div>
+
+
+
+<div align='center'>    
+<img style='height: 50%, width: 50%' src='assets/val_batch1_pred.jpg'>
+</div>
+
 
 ### References
 [1]  Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020, August). End-to-end object detection with transformers. In European Conference on Computer Vision (pp. 213-229). Springer, Cham.         
