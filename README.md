@@ -39,7 +39,7 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 <img src='assets/detr.png'>
 </div>
 
-- **You Only Look Once (YOLOv5)**:Object recognition systems from the YOLO family are often used for vehicle recognition tasks, and have been shown to outperform other target recognition algorithms. YOLOv5 has proven to significantly improve the processing time of deeper networks. This attribute will gain in importance when moving forward with the project to bigger datasets and real-time detection.     
+- **You Only Look Once (YOLOv5)**: Object recognition systems from the YOLO family are often used for vehicle recognition tasks, and have been shown to outperform other target recognition algorithms. YOLOv5 has proven to significantly improve the processing time of deeper networks. This attribute will gain in importance when moving forward with the project to bigger datasets and real-time detection.     
 
 <div align='center'>
 
