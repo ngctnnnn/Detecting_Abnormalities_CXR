@@ -123,8 +123,10 @@ node src/index.js
 </div>
 
 
-
 <div align='center'>    
+
+**An example of output for a batch of 32 images**
+
 <img style='height: 50%, width: 50%' src='assets/val_batch1_pred.jpg'>
 </div>
 
