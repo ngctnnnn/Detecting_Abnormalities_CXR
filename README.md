@@ -8,10 +8,11 @@ In this work, we would like to introduce 2 of the highlighted neural architectur
 ### Table of contents
 1. [Introduction](#1-introduction)
 2. [Repo structure](#2-repo-structure)
-3. [Experimental configuration](#3-experimental-configuration)
-4. [Pretrained model](#4-pretrained-model)
-5. [Results](#5-results)
-6. [References](#6-references)
+3. [Demo](#3-demo)
+4. [Experimental configuration](#4-experimental-configuration)
+5. [Pretrained model](#5-pretrained-model)
+6. [Results](#6-results)
+7. [References](#7-references)
 
 ---
 
@@ -53,7 +54,24 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 - **gitignore**
 - **LICENSE**
 
-### 3. Experimental configuration
+### 3. Demo
+#### How to run model in local
+
+##### Download nodeJS
+- First, you need to download [NODEJS](https://nodejs.org/en/). Node.js is an open-source, cross-platform, JavaScript runtime environment. To get more infomation about Node.js, please see the [Node.js Website](https://nodejs.org/en/). 
+
+##### Install dependencies
+
+- In your terminal, run this script to init:
+```{bash} 
+chmod +x src/dependencies.sh && ./src/dependencies.sh
+```
+- Run 
+```{bash}
+node src/index.js
+```
+
+### 4. Experimental configuration
 
 - Proceeded in 30 epochs with GPU: `NVIDIA @ Tesla P100-PCIE-16GB`, RAM: 26GB and Pytorch framework
 - Both architectures are trained and validated using 5-fold cross validation on training set; then tested on test set
@@ -62,12 +80,12 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 - DETR’s learning rate is 3e-5 and YOLOv5x’s learning rate is 0.01
 
 
-### 4. Pretrained model
+### 5. Pretrained model
 - [YOLOv5x](https://drive.google.com/file/d/1ZckQYba28BkCLZX0ASgvM6THhhEjZTlf/view)
 - [DETR](https://drive.google.com/file/d/1BDjRhMsuryTS8oQ6uWRD8RM7Sf7JC547/view)
 
 
-### 5. Results
+### 6. Results
 <div align='center'>
     
 | | Private score (mAP) |
@@ -108,7 +126,7 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 </div>
 
 
-### 6. References
+### 7. References
 [1]  Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020, August). End-to-end object detection with transformers. In European Conference on Computer Vision (pp. 213-229). Springer, Cham.         
 [2]  Stewart, R.J., Andriluka, M., Ng, A.Y.: End-to-end people detection in crowded scenes. In: CVPR (2015)      
 [3]  Nguyen, H. Q., Lam, K., Le, L. T., Pham, H. H., Tran, D. Q., Nguyen, D. B., ... & Vu, V. (2020). VinDr-CXR: An open dataset of chest X-rays with radiologist's annotations. arXiv preprint arXiv:2012.15029      
