@@ -86,6 +86,13 @@ node src/index.js
 
 
 ### 6. Results
+
+<div align='center'>
+    
+**Private score on Kaggle's VinBigData Chest X-ray Abnormalities Detection contest**
+
+</div>
+
 <div align='center'>
     
 | | Private score (mAP) |
@@ -102,21 +109,17 @@ node src/index.js
 </div>
 
 <div align='center'>
-    
-**Private score on Kaggle's VinBigData Chest X-ray Abnormalities Detection contest**
-
-</div>
-    
-<div align='center'>
-
-<img src='assets/train-loss.png'>
 
 **Training curve and valid loss curve on 2 architectures**
 
-<img src='assets/training-time-test.png'>
-    
+<img src='assets/train-loss.png'>
+
+
 **Comparison between 2 architectures**
-    
+
+
+<img src='assets/training-time-test.png'>
+        
 </div>
 
 
