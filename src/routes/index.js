@@ -12,8 +12,8 @@ function route(app){
         return res.render('home');
     });
     
-    const multer  = require('multer') 
-    const path = require('path')
+    const multer  = require('multer'); 
+    const path = require('path');
     const fs = require("fs");
 
     const storage_image = multer.diskStorage({
@@ -23,16 +23,16 @@ function route(app){
         filename: (req, file, cb) => {  
             cb(null, file.originalname);  
         }
-    })
+    });
 
     const storage_model = multer.diskStorage({ 
         destination: (req, file, cb) => {
             cb(null, path.join(__dirname, '../public/model/'));
         }, 
         filename: (req, file, cb) => {  
-            cb(null, file.originalname)
+            cb(null, file.originalname);
         }
-    })
+    }); 
 
     const upload_image = multer({ storage: storage_image })  
     const upload_model = multer({ storage: storage_model })
@@ -56,7 +56,7 @@ function route(app){
             fs.unlinkSync(path.join(__dirname, '../public/img/', req.file.originalname));
             return res.render('NOT_SUPPORTED_IMAGE_FORMAT');
         }
-    }) 
+    }); 
 
     app.get('/upload_model', (req, res) => {
         return res.render('upload_model');
