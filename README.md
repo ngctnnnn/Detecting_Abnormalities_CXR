@@ -17,8 +17,11 @@ In this work, we would like to introduce 2 of the highlighted neural architectur
 ---
 
 ### 1. Introduction
-😇 Our seminar towards this problem is [here](https://docs.google.com/presentation/d/1yuXYOfvzT87p70bg9UB8lxxuV51fv76dW3TDGhrJR4g/edit?usp=sharing)
-#### Dataset
+   
+😇 Our seminar towards this problem is [here](https://docs.google.com/presentation/d/1yuXYOfvzT87p70bg9UB8lxxuV51fv76dW3TDGhrJR4g/edit?usp=sharing)     
+
+#### Dataset     
+    
 - Our dataset is taken from [VinDr-CXR](https://vindr.ai/datasets/cxr).
 <div align='center'>
 
@@ -30,6 +33,7 @@ In this work, we would like to introduce 2 of the highlighted neural architectur
 - Among 18 000 CXR scans, there are 5 000 scans served as training set, and 3 000 others as test set. The original size was `1024 x 1024` but we did resize them into `256 x 256` and change image format from DICOM into PNG.
 
 #### Architectures
+    
 Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.org/abs/2005.12872)* and *[You Only Look Once](https://github.com/ultralytics/yolov5)*.     
 
 - **DEtection TRansformer (DETR)**: Proposed by Nicolas Carion and Francisco Massa from Facebook AI in 2020. DETR was first introduced to eliminate handmade's interference on postprocessing step effectively but still maintain the high performance compared to other methods.    
@@ -46,7 +50,8 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 <img src='assets/yolov5.png'>
 </div>
 
-### 2. Repo structure
+### 2. Repo structure  
+
 - **assets**: images used for this readme
 - **Model**
     - **DETR.ipynb**
@@ -55,7 +60,9 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 - **LICENSE**
 
 ### 3. Demo
+     
 #### How to run model in local
+    
 
 ##### Download nodeJS
 - First, you need to download [NODEJS](https://nodejs.org/en/). Node.js is an open-source, cross-platform, JavaScript runtime environment. To get more infomation about Node.js, please see the [Node.js Website](https://nodejs.org/en/). 
@@ -81,6 +88,7 @@ node src/index.js
 
 
 ### 5. Pretrained model
+
 - [YOLOv5x](https://drive.google.com/file/d/1ZckQYba28BkCLZX0ASgvM6THhhEjZTlf/view)
 - [DETR](https://drive.google.com/file/d/1BDjRhMsuryTS8oQ6uWRD8RM7Sf7JC547/view)
 
@@ -132,6 +140,7 @@ node src/index.js
 
 
 ### 7. References
+
 [1]  Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., & Zagoruyko, S. (2020, August). End-to-end object detection with transformers. In European Conference on Computer Vision (pp. 213-229). Springer, Cham.      
 
 [2]  Stewart, R.J., Andriluka, M., Ng, A.Y.: End-to-end people detection in crowded scenes. In: CVPR (2015)     
