@@ -1,6 +1,6 @@
 import os
 
-path_model = 'weights/best.pt'
+path_model = 'yolov5/weights/best.pt'
 path_image = 'public/img/image.png'
 path_result = 'public/img/result.png'
 
@@ -15,7 +15,7 @@ def predict(path_image, path_model):
     Returns:
     path_result -- path of output image
     """
-    os.system(f'python ../../../yolov5/detect.py   --weights {path_model} \
+    os.system(f'python3 yolov5/detect.py   --weights {path_model} \
                                     --img 256 \
                                     --conf 0.01 \
                                     --iou 0.4 \
