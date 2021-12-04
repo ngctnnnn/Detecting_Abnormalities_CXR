@@ -8,7 +8,8 @@ const route = require('./routes');
 // HTTP LOGGER
 // app.use(morgan('combined'));
 
-app.use(express.static(path.join(__dirname, './public')));
+// app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(__dirname));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json()); 
 

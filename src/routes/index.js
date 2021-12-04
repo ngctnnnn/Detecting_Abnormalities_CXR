@@ -88,17 +88,21 @@ function route(app){
     });
 
     app.get('/run_model', (req, res) => { 
-        const { spawn } = require('child_process');
-        const path_script = path.join(__dirname, '../public/script/model.py');
-        
-        // const pythonProcess = spawn('python',["path/to/script.py", arg1, arg2, ...]);
-        const pyProg = spawn('python', [path_script]);
+        console.log('runing path...'); 
 
-        pyProg.stdout.on('data', (data) => {
-            console.log(data.toString());
-            res.write(data);
-            res.end('end');
-        });
+        // const { spawn } = require('child_process');
+        // const path_script = path.join(__dirname, '../public/script/model.py');
+        
+        // // const pythonProcess = spawn('python',["path/to/script.py", arg1, arg2, ...]);
+        // const pyProg = spawn('python', [path_script]);
+
+        // pyProg.stdout.on('data', (data) => {
+        //     console.log(data.toString());
+        //     res.write(data);
+        //     res.end('end');
+        // });
+
+        res.render('show_predict');
     });
 }
 
