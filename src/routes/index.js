@@ -86,6 +86,20 @@ function route(app){
         fs.unlinkSync(path.join(__dirname, '../public/model/', req.file.originalname));
         return res.render('NOT_SUPPORTED_MODEL');
     });
+
+    app.get('/run_model', (req, res) => { 
+        const { spawn } = require('child_process');
+        const path_script = path.join(__dirname, '../public/script/model.py');
+        
+        // const pythonProcess = spawn('python',["path/to/script.py", arg1, arg2, ...]);
+        const pyProg = spawn('python', [path_script]);
+
+        pyProg.stdout.on('data', (data) => {
+            console.log(data.toString());
+            res.write(data);
+            res.end('end');
+        });
+    });
 }
 
 module.exports = route;
