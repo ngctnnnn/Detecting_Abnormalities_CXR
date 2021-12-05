@@ -60,10 +60,7 @@ Here we use 2 architectures, which are: *[DEtection TRansformer](https://arxiv.o
 - **LICENSE**
 
 ### 3. Demo
-     
 #### How to run model in local
-    
-
 ##### Download nodeJS
 - First, you need to download [NODEJS](https://nodejs.org/en/). Node.js is an open-source, cross-platform, JavaScript runtime environment. To get more infomation about Node.js, please see the [Node.js Website](https://nodejs.org/en/). 
 
@@ -77,6 +74,11 @@ chmod +x src/dependencies.sh && ./src/dependencies.sh
 ```{bash}
 node src/index.js
 ```
+#### Screenshot from our demo
+<div align='center'> 
+   
+<img width="1440" alt="Screen Shot 2021-12-05 at 09 57 06" src="https://user-images.githubusercontent.com/67086934/144731683-2e63c35b-a03d-4815-8db2-8b1476adfd7a.png">
+</div>
 
 ### 4. Experimental configuration
 
