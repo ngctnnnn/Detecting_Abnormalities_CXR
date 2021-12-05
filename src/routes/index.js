@@ -88,7 +88,7 @@ function route(app){
     });
 
     app.get('/run_model', (req, res) => { 
-        console.log('runing path...'); 
+        console.log('======> Running path...'); 
 
         // const { spawn } = require('child_process');
         // const path_script = path.join(__dirname, '../public/script/model.py');
