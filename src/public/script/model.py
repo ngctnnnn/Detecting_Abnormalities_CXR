@@ -3,8 +3,8 @@ import cv2
 # path_model = 'weights/best.pt'
 # path_image = '../img/image.png'
 # path_result = '../img/result.png'
- 
-path_model = 'public/model/best.pt'
+
+path_model = 'public/model/model.pt'
 path_image = 'public/img/image.png'
 path_result = 'yolov5/runs/detect/exp/image.png'
 
@@ -26,6 +26,6 @@ def predict(path_image, path_model):
                                     --source {path_image} \
                                     --save-txt --save-conf --exist-ok')
     cv2.resize(cv2.imread('yolov5/runs/detect/exp/image.png'), (4096, 4096), fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
-    # os.system(f'mv ../yolov5/ ../public/img/result.png')
-
+    
 predict(path_image, path_model)
+ 

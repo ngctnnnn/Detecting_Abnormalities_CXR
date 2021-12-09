@@ -11,11 +11,16 @@
         An image is already predicted.
     </div>
 
-    <div align="center">
+    {{!-- <div align="center">
         <img src ="img/image.png" class="img-fluid" alt="Responsive image">
         <h4>
             Image of a patient is predicted. 
         </h4>
-    </div> 
+    </div>  --}}
+
+    <form method="POST" action="/run_model">
+        <input type="submit" class="btn btn-primary"></input>
+    </form>
+
 </div>
 
