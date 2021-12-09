@@ -157,3 +157,9 @@ node src/index.js
 
 [7]  Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollar, and C Lawrence ´ Zitnick. Microsoft coco: Common objects in context. In ECCV, 2014.      
 
+[8] Redmon, J., Divvala, S., Girshick, R. and Farhadi, A., 2016. You Only Look Once: Unified, Real-Time Object Detection.  
+
+[9] Redmon, J. and Farhadi, A., 2018. YOLOv3: An Incremental Improvement. 
+
+[10] Bochkovskiy, A., Wang, C. and Liao, H., 2020. YOLOv4: Optimal Speed and Accuracy of Object Detection 
+
