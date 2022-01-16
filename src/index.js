@@ -19,7 +19,7 @@ app.set("views", path.resolve(__dirname, './resources/views'));
  
 route(app); 
 
-app.listen(3000, () => { 
+app.listen(process.env.PORT || 3000, () => { 
     console.log('Server is running on port http://localhost:3000/');
 });
  
